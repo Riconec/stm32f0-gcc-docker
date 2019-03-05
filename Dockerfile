@@ -2,7 +2,7 @@
 # available at https://cloud.docker.com/u/riconec/repository/docker/riconec/stm32f0-gcc-baremetal
 
 # start with minimal image
-FROM alpine
+FROM ubuntu
 
 WORKDIR /work
 ADD . /work
