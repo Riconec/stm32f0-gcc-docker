@@ -16,13 +16,10 @@ RUN apt update && \
       git \
       bzip2 \
       wget && \
-    apt clean && \
-    wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2 -O cortex_m.tar.bz2 && \
-    tar -xjf cortex_m.tar.bz2 && \
-    rm cortex_m.tar.bz2
-
-ENV PATH "/work/gcc-arm-none-eabi-7-2017-q4-major/bin:$PATH"
+      apt clean
+    
+RUN apt-get install gcc-arm-none-eabi -y
 
 # Greetings
-CMD echo "Started Docker image for STM32F0 series development"
+CMD echo "Started Docker image for STM32F0\1 series development"
 
